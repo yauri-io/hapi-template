@@ -1,0 +1,60 @@
+{
+  "name": "hapi-template",
+  "version": "1.0.0",
+  "description": "Hapi template",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "lab test -v",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yauri-io/hapi-template.git"
+  },
+  "keywords": [
+    "hapijs"
+  ],
+  "author": "yauri-io",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/yauri-io/hapi-next/issues"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "homepage": "https://github.com/yauri-io/hapi-next#readme",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@hapi/glue": "^7.0.0",
+    "@hapi/good": "^9.0.0",
+    "@hapi/good-console": "^9.0.0",
+    "@hapi/good-squeeze": "^6.0.0",
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/hoek": "^9.0.4",
+    "@hapi/joi": "^17.1.1",
+    "bluebird": "^3.7.2",
+    "config": "^3.3.1",
+    "hapi-pino": "^8.0.0"
+  },
+  "devDependencies": {
+    "@hapi/code": "^8.0.1",
+    "@hapi/eslint-config-hapi": "^13.0.2",
+    "@hapi/eslint-plugin-hapi": "^4.3.5",
+    "@hapi/lab": "^22.0.4",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-loopback": "^13.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.6",
+    "nodemon": "^2.0.3"
+  }
+}

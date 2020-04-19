@@ -1,0 +1,18 @@
+{
+  "extends": "loopback",
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 140,
+        "ignoreComments": true
+      }
+    ],
+    "comma-dangle": "off",
+    "padded-blocks": "off",
+    "brace-style": [
+      "error",
+      "stroustrup"
+    ]
+  }
+}
