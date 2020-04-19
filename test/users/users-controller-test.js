@@ -64,14 +64,14 @@ describe('User.controller', () => {
   // for testing pre handler
   test('Create sample user returns sample user', async () => {
     const request = {
-      url: '/users/sample',
+      url: '/users/1',
       method: 'GET'
     };
     const res = await Server.getInstance().inject(request);
     expect(res.statusCode).to.equal(200);
-    expect(res.result.fName).to.equal('sample');
-    expect(res.result.lName).to.equal('user');
-    expect(res.result.age).to.equal(99);
+    expect(res.result.fName).to.equal('Joker');
+    expect(res.result.lName).to.equal('John Doe');
+    expect(res.result.age).to.equal(33);
   });
 
   // more test...
