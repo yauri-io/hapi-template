@@ -5,7 +5,7 @@ const Bluebird = require('bluebird');
 global.Promise = Bluebird;
 
 const Boom = require('@hapi/boom');
-const Config = require('config');
+const Config = require('./config');
 const Hoek = require('@hapi/hoek');
 const Glue = require('@hapi/glue');
 const PreHandler = require('./pre-handler');
@@ -17,27 +17,25 @@ const server = {};
 // default value
 const defaultManifest = {
   server: {
-    port: Config.get('server.port'),
-    host: Config.get('server.host'),
+    port: Config.server.port,
+    host: Config.server.host,
     routes: {
-      cors: {origin: Config.get('server.allowOrigins')},
+      cors: {origin: Config.server.allowOrigins},
       validate: {
         failAction: (request, h, err) => {
 
-          if (process.env.NODE_ENV === 'dev') {
+          if (Config.environment === 'dev') {
             console.log('error', err);
             throw err;
           }
-          else {
-            throw request.server.boom.badRequest(null, 'Invalid request');
-          }
+          // to protect the validation message from outsiders
+          throw request.server.boom.badRequest(null, 'Invalid request');
         }
       }
     }
   }
 };
 
-// default value
 const defaultOptions = {
   relativeTo: __dirname
 };
@@ -53,7 +51,6 @@ server.start = async () => {
   try {
     hapiServer = await Glue.compose(server.manifest, server.options);
 
-    // extends
     // REF: https://github.com/hapijs/hapi/blob/master/API.md#server.decorate()
     // extends server object
     /** @namespace request.server.boom */
