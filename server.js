@@ -67,8 +67,6 @@ server.start = async () => {
     hapiServer.decorate('toolkit', 'toolkitName', {});
 
     await hapiServer.start();
-
-    console.log('Server started at: ', hapiServer.info.uri);
   }
   catch (err) {
     console.error(err);
@@ -78,7 +76,7 @@ server.start = async () => {
 
 process.on('SIGINT', () => {
   // close all necessary connection here
-  console.log('SERVER STOPPED');
+  console.log('SERVER STOPPED', new Date().toUTCString());
   process.exit(0);
 });
 
