@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Hapi template",
   "main": "index.js",
+  "engines": {
+    "node": ">= 12.12"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
@@ -17,7 +20,7 @@
     "hapijs"
   ],
   "author": "yauri-io",
-  "license": "Unlicense",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yauri-io/hapi-next/issues"
   },

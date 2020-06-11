@@ -1,4 +1,11 @@
 # Hapi Template
 
-This is a starter template for Node JS project using [HapiJS](https://hapijs.com) latest version (ver 17).
-Requires Node version > 8.x
+[HapiJS](https://hapijs.com) project template.
+
+How to run:
+- Copy .env.example to new file .env
+- Install module
+``npm install``
+- Run for development
+``npm run dev``
+
