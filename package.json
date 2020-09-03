@@ -37,27 +37,27 @@
   "homepage": "https://github.com/yauri-io/hapi-next#readme",
   "dependencies": {
     "@hapi/boom": "^9.1.0",
-    "@hapi/glue": "^7.0.0",
+    "@hapi/glue": "^8.0.0",
     "@hapi/good": "^9.0.0",
     "@hapi/good-console": "^9.0.0",
     "@hapi/good-squeeze": "^6.0.0",
-    "@hapi/hapi": "^19.1.1",
-    "@hapi/hoek": "^9.0.4",
+    "@hapi/hapi": "^20.0.0",
+    "@hapi/hoek": "^9.1.0",
     "@hapi/joi": "^17.1.1",
     "bluebird": "^3.7.2",
     "dotenv": "^8.2.0",
-    "hapi-pino": "^8.0.1"
+    "hapi-pino": "^8.2.0"
   },
   "devDependencies": {
-    "@hapi/code": "^8.0.1",
+    "@hapi/code": "^8.0.2",
     "@hapi/eslint-config-hapi": "^13.0.2",
     "@hapi/eslint-plugin-hapi": "^4.3.5",
-    "@hapi/lab": "^22.0.4",
+    "@hapi/lab": "^23.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.2.0",
+    "eslint": "^7.8.1",
     "eslint-config-loopback": "^13.1.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.9",
+    "lint-staged": "^10.3.0",
     "nodemon": "^2.0.4"
   }
 }
