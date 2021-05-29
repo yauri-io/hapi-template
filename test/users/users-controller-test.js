@@ -4,7 +4,7 @@ const Code = require('@hapi/code');
 const Lab = require('@hapi/lab');
 
 const lab = exports.lab = Lab.script();
-const {before, after, describe, test} = lab;
+const { before, after, describe, test } = lab;
 const expect = Code.expect;
 const Server = require('../../server');
 
@@ -23,7 +23,7 @@ describe('User.controller', () => {
   test('Get user by id should returns user object', async () => {
     const request = {
       url: '/users/1',
-      method: 'GET'
+      method: 'GET',
     };
     const res = await Server.getInstance().inject(request);
     expect(res.result.id).to.equal(1);
@@ -32,7 +32,7 @@ describe('User.controller', () => {
   test('Get user by wrong id should returns empty object', async () => {
     const request = {
       url: '/users/1000',
-      method: 'GET'
+      method: 'GET',
     };
     const res = await Server.getInstance().inject(request);
     expect(res.result.id).to.not.exist();
@@ -41,7 +41,7 @@ describe('User.controller', () => {
   test('Get user by string id should returns bad request', async () => {
     const request = {
       url: '/users/string',
-      method: 'GET'
+      method: 'GET',
     };
     const res = await Server.getInstance().inject(request);
     expect(res.statusCode).to.equal(400);
@@ -54,8 +54,8 @@ describe('User.controller', () => {
       payload: {
         fName: 'fName',
         lName: 'lName',
-        age: 30
-      }
+        age: 30,
+      },
     };
     const res = await Server.getInstance().inject(request);
     expect(res.statusCode).to.equal(400);
@@ -65,7 +65,7 @@ describe('User.controller', () => {
   test('Create sample user returns sample user', async () => {
     const request = {
       url: '/users/1',
-      method: 'GET'
+      method: 'GET',
     };
     const res = await Server.getInstance().inject(request);
     expect(res.statusCode).to.equal(200);
@@ -80,16 +80,16 @@ describe('User.controller', () => {
 internals.manifest = {
   server: {
     host: 'localhost',
-    port: 8000
+    port: 8000,
   },
   register: {
     plugins: [
       {
         plugin: './plugins/users',
         options: {
-          defaultUser: {id: '0', name: 'default'}
-        }
-      }
-    ]
-  }
+          defaultUser: { id: '0', name: 'default' },
+        },
+      },
+    ],
+  },
 };

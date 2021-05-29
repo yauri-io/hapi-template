@@ -1,18 +1,25 @@
 {
-  "extends": "loopback",
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "globals": {
+    "Logger": true,
+    "ErrorCode": true
+  },
   "rules": {
     "max-len": [
       "error",
       {
-        "code": 140,
+        "code": 150,
         "ignoreComments": true
       }
     ],
     "comma-dangle": "off",
     "padded-blocks": "off",
-    "brace-style": [
-      "error",
-      "stroustrup"
-    ]
+    "camelcase": "off"
   }
 }

@@ -6,7 +6,8 @@ const PreHandler = require('./pre-handler');
 
 const internals = {};
 
-module.exports = (server, options) => {
+// eslint-disable-next-line no-unused-vars
+module.exports = ( server, options ) => {
   // passed options when loading plugin available here
   // uncomment to see the content
   // console.log(options);
@@ -14,34 +15,34 @@ module.exports = (server, options) => {
   server.dependency([], internals.after);
 };
 
-internals.after = (server) => {
+internals.after = ( server ) => {
   server.route([
     {
       method: 'GET',
       path: '/users/{id}',
       config: {
         validate: UserValidator.getById,
-        handler: UserController.getById
-      }
+        handler: UserController.getById,
+      },
     },
     {
       method: 'GET',
       path: '/users',
       config: {
-        handler: UserController.listUser
-      }
+        handler: UserController.listUser,
+      },
     },
     {
       method: 'POST',
       path: '/users',
       config: {
         pre: [
-          {method: PreHandler.checkUserExistence}
+          { method: PreHandler.checkUserExistence },
         ],
         validate: UserValidator.create,
-        handler: UserController.create
-      }
-    }
+        handler: UserController.create,
+      },
+    },
   ]);
 };
 

@@ -6,8 +6,8 @@ const validator = {};
 
 validator.sample = {
   payload: Joi.object().keys({
-    name: Joi.string().required()
-  })
+    name: Joi.string().required(),
+  }),
 };
 
 module.exports = validator;

@@ -1,4 +1,5 @@
 ### Plugins must be in a folder, at least consists of:
+
 - Plugin index (for plugin registration)
 - Controller
 - Validator

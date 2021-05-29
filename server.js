@@ -20,9 +20,9 @@ const defaultManifest = {
     port: Config.server.port,
     host: Config.server.host,
     routes: {
-      cors: {origin: Config.server.allowOrigins},
+      cors: { origin: Config.server.allowOrigins },
       validate: {
-        failAction: (request, h, err) => {
+        failAction: ( request, h, err ) => {
 
           if (Config.environment === 'dev') {
             console.log('error', err);
@@ -30,17 +30,17 @@ const defaultManifest = {
           }
           // to protect the validation message from outsiders
           throw request.server.boom.badRequest(null, 'Invalid request');
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 };
 
 const defaultOptions = {
-  relativeTo: __dirname
+  relativeTo: __dirname,
 };
 
-server.configure = (manifest = {}, options = {}) => {
+server.configure = ( manifest = {}, options = {} ) => {
 
   server.manifest = Hoek.applyToDefaults(defaultManifest, manifest);
   server.options = Hoek.applyToDefaults(defaultOptions, options);
@@ -64,17 +64,17 @@ server.start = async () => {
     hapiServer.decorate('toolkit', 'toolkitName', {});
 
     await hapiServer.start();
-  }
-  catch (err) {
+  } catch (err) {
     console.error(err);
-    process.exit(1);
   }
 };
 
-process.on('SIGINT', () => {
+process.on('SIGINT', async () => {
   // close all necessary connection here
-  console.log('SERVER STOPPED', new Date().toUTCString());
-  process.exit(0);
+  await hapiServer.stop({ timeout: 10000 });
+  console.log('SERVER END', new Date().toUTCString());
+  // eslint-disable-next-line no-process-exit
+  process.exit();
 });
 
 server.getInstance = () => hapiServer;

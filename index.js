@@ -13,12 +13,12 @@ const manifest = {
           prettyPrint: Config.environment !== 'prod',
           logPayload: true,
           level: Config.server.logLevel,
-          redact: ['req.headers.authorization'] // do not log authorization in the headers
-        }
+          redact: ['req.headers.authorization'], // do not log authorization in the headers
+        },
       },
-      {plugin: './plugins/users'}
-    ]
-  }
+      { plugin: './plugins/users' },
+    ],
+  },
 };
 
 Server.configure(manifest);
