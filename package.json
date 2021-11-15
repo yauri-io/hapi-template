@@ -47,15 +47,15 @@
     "@hapi/joi": "^17.1.1",
     "bluebird": "^3.7.2",
     "dotenv": "^10.0.0",
-    "hapi-pino": "^8.5.0"
+    "hapi-pino": "^9.0.0"
   },
   "devDependencies": {
-    "@hapi/code": "^8.0.3",
-    "@hapi/lab": "^24.3.2",
-    "eslint": "^8.1.0",
+    "@hapi/code": "^8.0.4",
+    "@hapi/lab": "^24.4.0",
+    "eslint": "^8.2.0",
     "eslint-plugin-node": "^11.1.0",
     "husky": "^7.0.4",
-    "lint-staged": "^11.2.6",
-    "nodemon": "^2.0.14"
+    "lint-staged": "^12.0.2",
+    "nodemon": "^2.0.15"
   }
 }
