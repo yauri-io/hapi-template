@@ -11,7 +11,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "lab test -v",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
