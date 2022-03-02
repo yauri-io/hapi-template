@@ -44,18 +44,18 @@
     "@hapi/good-squeeze": "^6.0.0",
     "@hapi/hapi": "^20.2.1",
     "@hapi/hoek": "^9.2.1",
-    "@hapi/joi": "^17.1.1",
     "bluebird": "^3.7.2",
-    "dotenv": "^10.0.0",
-    "hapi-pino": "^9.0.0"
+    "dotenv": "^16.0.0",
+    "hapi-pino": "^9.1.2",
+    "joi": "^17.6.0"
   },
   "devDependencies": {
-    "@hapi/code": "^8.0.4",
-    "@hapi/lab": "^24.4.0",
-    "eslint": "^8.2.0",
+    "@hapi/code": "^8.0.7",
+    "@hapi/lab": "^24.5.1",
+    "eslint": "^8.10.0",
     "eslint-plugin-node": "^11.1.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.0.2",
+    "lint-staged": "^12.3.4",
     "nodemon": "^2.0.15"
   }
 }
