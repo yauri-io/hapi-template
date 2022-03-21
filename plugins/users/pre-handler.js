@@ -1,18 +1,18 @@
-'use strict';
+'use strict'
 
-const preHandler = {};
+const preHandler = {}
 
-preHandler.checkUserExistence = ( request, h ) => {
-  const payload = request.payload;
+preHandler.checkUserExistence = (request, h) => {
+  const payload = request.payload
   if (payload.fName === 'fName' && payload.lName === 'lName') {
-    throw request.server.boom.badRequest('User already exist');
+    throw request.server.boom.badRequest('User already exist')
   }
 
-  return h.continue;
-};
+  return h.continue
+}
 
 preHandler.injectSampleUser = () => {
-  return { id: 0, fName: 'sample', lName: 'user', age: 99 };
-};
+  return { id: 0, fName: 'sample', lName: 'user', age: 99 }
+}
 
-module.exports = preHandler;
+module.exports = preHandler

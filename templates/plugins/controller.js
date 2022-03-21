@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const controller = {};
+const controller = {}
 
-controller.sample = ( request, h ) => request.pre.getSampleData;
+controller.sample = (request, h) => request.pre.getSampleData
 
-module.exports = controller;
+module.exports = controller

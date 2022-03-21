@@ -1,16 +1,16 @@
-'use strict';
+'use strict'
 
-const UserModel = require('./model');
+const UserModel = require('./model')
 
-const userController = {};
+const userController = {}
 
-userController.getById = ( request ) => UserModel.getById(request.params.id);
+userController.getById = (request) => UserModel.getById(request.params.id)
 
-userController.listUser = () => UserModel.listUser();
+userController.listUser = () => UserModel.listUser()
 
-userController.create = ( request ) => {
-  const userId = UserModel.create(request.payload);
-  return userId;
-};
+userController.create = (request) => {
+  const userId = UserModel.create(request.payload)
+  return userId
+}
 
-module.exports = userController;
+module.exports = userController

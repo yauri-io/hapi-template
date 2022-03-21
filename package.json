@@ -11,7 +11,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "lab test -v",
-    "lint": "eslint .",
+    "lint": "standard --fix ./",
     "prepare": "husky install"
   },
   "repository": {
@@ -28,7 +28,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix"
+      "standard --fix"
     ]
   },
   "husky": {
@@ -54,10 +54,9 @@
   "devDependencies": {
     "@hapi/code": "^8.0.7",
     "@hapi/lab": "^24.5.1",
-    "eslint": "^8.11.0",
-    "eslint-plugin-node": "^11.1.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "standard": "^16.0.4"
   }
 }
