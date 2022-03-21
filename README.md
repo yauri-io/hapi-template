@@ -1,6 +1,6 @@
 # Hapi Template
 
-[HapiJS](https://hapijs.com) project template.
+[HapiJS](https://hapi.dev) project template.
 
 How to run:
 
