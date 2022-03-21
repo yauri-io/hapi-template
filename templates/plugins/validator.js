@@ -1,13 +1,13 @@
-'use strict';
+'use strict'
 
-const Joi = require('joi');
+const Joi = require('joi')
 
-const validator = {};
+const validator = {}
 
 validator.sample = {
   payload: Joi.object().keys({
-    name: Joi.string().required(),
-  }),
-};
+    name: Joi.string().required()
+  })
+}
 
-module.exports = validator;
+module.exports = validator

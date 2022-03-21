@@ -1,5 +1,5 @@
-'use strict';
+'use strict'
 
-const model = {};
+const model = {}
 
-module.exports = model;
+module.exports = model
