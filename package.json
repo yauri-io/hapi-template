@@ -43,20 +43,20 @@
     "@hapi/good": "^9.0.1",
     "@hapi/good-console": "^9.0.1",
     "@hapi/good-squeeze": "^6.0.0",
-    "@hapi/hapi": "^20.2.1",
+    "@hapi/hapi": "^20.2.2",
     "@hapi/hoek": "^9.2.1",
     "bluebird": "^3.7.2",
     "dotenv": "^16.0.0",
-    "hapi-pino": "^9.2.0",
+    "hapi-pino": "^9.3.0",
     "joi": "^17.6.0",
-    "pino-pretty": "^7.5.4"
+    "pino-pretty": "^7.6.1"
   },
   "devDependencies": {
     "@hapi/code": "^8.0.7",
-    "@hapi/lab": "^24.5.1",
+    "@hapi/lab": "^24.7.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.7",
-    "nodemon": "^2.0.15",
+    "lint-staged": "^12.4.1",
+    "nodemon": "^2.0.16",
     "standard": "^16.0.4"
   }
 }
