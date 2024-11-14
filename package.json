@@ -43,25 +43,25 @@
     "@hapi/good": "^9.0.1",
     "@hapi/good-console": "^9.0.1",
     "@hapi/good-squeeze": "^6.0.0",
-    "@hapi/hapi": "^21.3.9",
-    "@hapi/hoek": "^11.0.4",
+    "@hapi/hapi": "^21.3.12",
+    "@hapi/hoek": "^11.0.6",
     "bluebird": "^3.7.2",
     "dotenv": "^16.4.5",
     "hapi-pino": "^12.1.0",
-    "joi": "^17.13.1",
-    "pino-pretty": "^10.3.1"
+    "joi": "^17.13.3",
+    "pino-pretty": "^13.0.0"
   },
   "devDependencies": {
     "@hapi/code": "^9.0.3",
-    "@hapi/lab": "^25.2.0",
-    "eslint": "^8.57.0",
+    "@hapi/lab": "^26.0.0",
+    "eslint": "^8.57.1",
     "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.2",
-    "nodemon": "^3.1.0",
-    "standard": "^17.1.0"
+    "eslint-plugin-promise": "^6.6.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "nodemon": "^3.1.7",
+    "standard": "^17.1.2"
   }
 }
