@@ -44,9 +44,9 @@
     "@hapi/good-console": "^9.0.1",
     "@hapi/good-squeeze": "^6.0.0",
     "@hapi/hapi": "^21.3.12",
-    "@hapi/hoek": "^11.0.6",
+    "@hapi/hoek": "^11.0.7",
     "bluebird": "^3.7.2",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.4.7",
     "hapi-pino": "^12.1.0",
     "joi": "^17.13.3",
     "pino-pretty": "^13.0.0"
@@ -59,9 +59,9 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.6.0",
-    "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
-    "nodemon": "^3.1.7",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "nodemon": "^3.1.9",
     "standard": "^17.1.2"
   }
 }
