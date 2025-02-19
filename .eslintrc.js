@@ -1,17 +1,30 @@
 module.exports = {
   env: {
     node: true,
-    commonjs: true,
-    es2021: true
+    es2022: true // or newer version if needed
   },
-  extends: 'standard',
-  overrides: [],
+  extends: [
+    'standard',
+    'plugin:prettier/recommended'
+  ],
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: 'latest',
+    sourceType: 'module' // This is important for ESM
   },
   rules: {
-    'n/exports-style': ['error', 'module.exports']
+    'import/extensions': ['error', 'always'], // Enforce .js extensions for ESM
+    'no-console': 'warn',
+    'no-unused-vars': ['error', {
+      argsIgnorePattern: '^_',
+      varsIgnorePattern: '^_'
+    }],
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error'
   },
-  plugins: ['promise', 'n'],
-  ignorePatterns: ['test/']
+  ignorePatterns: [
+    'node_modules/',
+    'dist/',
+    'coverage/'
+  ]
 }

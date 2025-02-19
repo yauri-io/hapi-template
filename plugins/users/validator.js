@@ -1,6 +1,4 @@
-'use strict'
-
-const Joi = require('joi')
+import Joi from 'joi'
 
 const userValidator = {}
 
@@ -11,12 +9,13 @@ userValidator.getById = {
 }
 
 userValidator.create = {
-  payload: Joi.object().keys({
-    fName: Joi.string().required(),
-    lName: Joi.string().required(),
-    age: Joi.number().positive().required()
-  })
+  payload: Joi.object()
+    .keys({
+      fName: Joi.string().required(),
+      lName: Joi.string().required(),
+      age: Joi.number().positive().required()
+    })
     .label('Create user payload')
 }
 
-module.exports = userValidator
+export default userValidator

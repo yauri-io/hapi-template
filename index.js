@@ -1,9 +1,8 @@
-'use strict'
+import 'dotenv/config'
+import Config from './config/index.js'
+import Server from './server.js'
 
-require('dotenv').config() // load environment variables before other scripts executed
-
-const Config = require('./config')
-const Server = require('./server')
+import UserPlugin from './plugins/users/index.js'
 
 const manifest = {
   register: {
@@ -30,10 +29,14 @@ const manifest = {
           redact: ['req.headers.authorization'] // do not log authorization in the headers
         }
       },
-      { plugin: './plugins/users' }
+      { plugin: UserPlugin }
     ]
   }
 }
 
 Server.configure(manifest)
-Server.start()
+  .start()
+  .catch((err) => {
+    console.log(err)
+    process.exit(1)
+  })

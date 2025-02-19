@@ -1,14 +1,31 @@
-'use strict'
+import Code from '@hapi/code'
+import Lab from '@hapi/lab'
+import Server from '../../server.js'
+import UserPlugin from '../../plugins/users/index.js'
 
-const Code = require('@hapi/code')
-const Lab = require('@hapi/lab')
+const lab = Lab.script()
 
-const lab = exports.lab = Lab.script()
 const { before, after, describe, test } = lab
 const expect = Code.expect
-const Server = require('../../server')
 
-const internals = {}
+const internals = {
+  manifest: {
+    server: {
+      host: 'localhost',
+      port: 8000
+    },
+    register: {
+      plugins: [
+        {
+          plugin: UserPlugin,
+          options: {
+            defaultUser: { id: '0', name: 'default' }
+          }
+        }
+      ]
+    }
+  }
+}
 
 describe('User.controller', () => {
   before(async () => {
@@ -77,19 +94,4 @@ describe('User.controller', () => {
   // more test...
 })
 
-internals.manifest = {
-  server: {
-    host: 'localhost',
-    port: 8000
-  },
-  register: {
-    plugins: [
-      {
-        plugin: './plugins/users',
-        options: {
-          defaultUser: { id: '0', name: 'default' }
-        }
-      }
-    ]
-  }
-}
+export { lab }

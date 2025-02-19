@@ -1,14 +1,13 @@
-'use strict'
-
-const Joi = require('joi')
+import Joi from 'joi'
 
 const validator = {}
 
 validator.sample = {
-  payload: Joi.object().keys({
-    name: Joi.string().required()
-  })
+  payload: Joi.object()
+    .keys({
+      name: Joi.string().required()
+    })
     .label('Sample payload')
 }
 
-module.exports = validator
+export default validator

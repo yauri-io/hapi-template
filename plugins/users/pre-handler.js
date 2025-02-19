@@ -1,6 +1,5 @@
-'use strict'
+import Boom from '@hapi/boom'
 
-const Boom = require('@hapi/boom')
 const preHandler = {}
 
 /**
@@ -21,4 +20,4 @@ preHandler.injectSampleUser = () => {
   return { id: '0', fName: 'sample', lName: 'user', age: 99 }
 }
 
-module.exports = preHandler
+export default preHandler

@@ -1,5 +1,3 @@
-'use strict'
-
 const controller = {}
 
 /**
@@ -9,4 +7,4 @@ const controller = {}
  */
 controller.sample = (request, h) => request.pre.getSampleData
 
-module.exports = controller
+export default controller

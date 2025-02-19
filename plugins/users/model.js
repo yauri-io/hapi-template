@@ -1,5 +1,3 @@
-'use strict'
-
 const userModel = {}
 
 /**
@@ -14,9 +12,7 @@ const userModel = {}
  *
  * @type {User[]}
  */
-const users = [
-  { id: 1, fName: 'Joker', lName: 'John Doe', age: 33 }
-]
+const users = [{ id: 1, fName: 'Joker', lName: 'John Doe', age: 33 }]
 
 /**
  * Get user by ID
@@ -42,4 +38,4 @@ userModel.create = (user) => {
   return { id: user.id }
 }
 
-module.exports = userModel
+export default userModel

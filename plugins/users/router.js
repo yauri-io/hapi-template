@@ -1,24 +1,8 @@
-'use strict'
-
-const UserController = require('./controller')
-const UserValidator = require('./validator')
-const PreHandler = require('./pre-handler')
+import PreHandler from './pre-handler.js'
+import UserController from './controller.js'
+import UserValidator from './validator.js'
 
 const internals = {}
-
-/**
- *
- * @param {import('@hapi/hapi').Server} server
- * @param {import('@hapi/hapi').RouteOptions} options
- */
-// eslint-disable-next-line no-unused-vars
-module.exports = (server, options) => {
-  // passed options when loading plugin available here
-  // uncomment to see the content
-  // console.log(options);
-
-  server.dependency([], internals.after)
-}
 
 /**
  *
@@ -45,12 +29,26 @@ internals.after = (server) => {
       method: 'POST',
       path: '/users',
       config: {
-        pre: [
-          { method: PreHandler.checkUserExistence }
-        ],
+        pre: [{ method: PreHandler.checkUserExistence }],
         validate: UserValidator.create,
         handler: UserController.create
       }
     }
   ])
 }
+
+/**
+ *
+ * @param {import('@hapi/hapi').Server} server
+ * @param {import('@hapi/hapi').RouteOptions} options
+ */
+// eslint-disable-next-line no-unused-vars
+const router = (server, options) => {
+  // passed options when loading plugin available here
+  // uncomment to see the content
+  // console.log(options);
+
+  server.dependency([], internals.after)
+}
+
+export default router

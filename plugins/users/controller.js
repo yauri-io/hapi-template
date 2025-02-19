@@ -1,6 +1,4 @@
-'use strict'
-
-const UserModel = require('./model')
+import UserModel from './model.js'
 
 const userController = {}
 
@@ -18,4 +16,4 @@ userController.create = (request) => {
   return userId
 }
 
-module.exports = userController
+export default userController
