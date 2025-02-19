@@ -12,7 +12,7 @@
     "dev": "nodemon index.js",
     "test": "lab test -v",
     "lint": "standard --fix ./",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
