@@ -1,6 +1,6 @@
 {
   "name": "hapi-template",
-  "version": "4.3.1",
+  "version": "5.0.0",
   "description": "Hapi template",
   "type": "module",
   "main": "index.js",
