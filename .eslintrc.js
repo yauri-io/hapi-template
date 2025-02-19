@@ -5,11 +5,13 @@ module.exports = {
     es2021: true
   },
   extends: 'standard',
-  overrides: [
-  ],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest'
   },
   rules: {
-  }
+    'n/exports-style': ['error', 'module.exports']
+  },
+  plugins: ['promise', 'n'],
+  ignorePatterns: ['test/']
 }
