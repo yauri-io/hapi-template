@@ -6,6 +6,11 @@ const PreHandler = require('./pre-handler')
 
 const internals = {}
 
+/**
+ *
+ * @param {import('@hapi/hapi').Server} server
+ * @param {import('@hapi/hapi').RouteOptions} options
+ */
 // eslint-disable-next-line no-unused-vars
 module.exports = (server, options) => {
   // passed options when loading plugin available here
@@ -15,6 +20,10 @@ module.exports = (server, options) => {
   server.dependency([], internals.after)
 }
 
+/**
+ *
+ * @param {import('@hapi/hapi').Server} server
+ */
 internals.after = (server) => {
   server.route([
     {

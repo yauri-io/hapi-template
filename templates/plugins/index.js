@@ -7,6 +7,11 @@ const plugin = {
   version: '1.0'
 }
 
+/**
+ *
+ * @param {import('@hapi/hapi').Server} server
+ * @param {import('@hapi/hapi').RouteOptions} options
+ */
 plugin.register = (server, options) => {
   // passed options when loading plugin available here
   // it can be passed to router as well

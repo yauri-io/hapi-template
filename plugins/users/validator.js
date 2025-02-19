@@ -16,6 +16,7 @@ userValidator.create = {
     lName: Joi.string().required(),
     age: Joi.number().positive().required()
   })
+    .label('Create user payload')
 }
 
 module.exports = userValidator

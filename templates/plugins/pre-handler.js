@@ -2,7 +2,7 @@
 
 const preHandler = {}
 
-preHandler.getSampleData = (request, h) => {
+preHandler.getSampleData = () => {
   return { id: 0, name: 'sample data' }
 }
 

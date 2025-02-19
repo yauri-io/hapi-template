@@ -5,6 +5,11 @@ const Controller = require('./controller')
 const Validator = require('./validator')
 const PreHandler = require('./pre-handler')
 
+/**
+ *
+ * @param {import('@hapi/hapi').Server} server
+ * @param {import('@hapi/hapi').RouteOptions} options
+ */
 module.exports = (server, options) => {
   // options can be used to pass property when loading this plugin
   // look on root folder index.js
@@ -13,6 +18,10 @@ module.exports = (server, options) => {
   server.dependency([], internals.after)
 }
 
+/**
+ *
+ * @param {import('@hapi/hapi').Server} server
+ */
 internals.after = (server) => {
   server.route([
     {
