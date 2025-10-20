@@ -50,6 +50,7 @@
   "devDependencies": {
     "@hapi/code": "^9.0.3",
     "@hapi/lab": "^26.0.0",
+    "@types/node": "^24.8.1",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
@@ -59,6 +60,15 @@
     "lint-staged": "^16.2.4",
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
-    "standard": "^17.1.2"
+    "standard": "^17.1.2",
+    "typescript": "^5.9.3"
+  },
+  "standard": {
+    "ignore": [
+      "node_modules/",
+      "dist/",
+      "coverage/",
+      "types/"
+    ]
   }
 }

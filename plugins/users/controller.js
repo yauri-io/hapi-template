@@ -5,14 +5,18 @@ const userController = {}
 /**
  *
  * @param {import('@hapi/hapi').Request} request
- * @returns {*}
+ * @returns {User | {}}
  */
 userController.getById = (request) => UserModel.getById(request.params.id)
 
 userController.listUser = () => UserModel.listUser()
 
+/**
+ *
+ * @param {import('@hapi/hapi').Request} request
+ */
 userController.create = (request) => {
-  const userId = UserModel.create(request.payload)
+  const userId = UserModel.create(/** @type {User} */ (request.payload))
   return userId
 }
 

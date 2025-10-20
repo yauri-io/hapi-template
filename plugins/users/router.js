@@ -8,12 +8,12 @@ const internals = {}
  *
  * @param {import('@hapi/hapi').Server} server
  */
-internals.after = (server) => {
+internals.after = async (server) => {
   server.route([
     {
       method: 'GET',
       path: '/users/{id}',
-      config: {
+      options: {
         validate: UserValidator.getById,
         handler: UserController.getById
       }
@@ -21,14 +21,14 @@ internals.after = (server) => {
     {
       method: 'GET',
       path: '/users',
-      config: {
+      options: {
         handler: UserController.listUser
       }
     },
     {
       method: 'POST',
       path: '/users',
-      config: {
+      options: {
         pre: [{ method: PreHandler.checkUserExistence }],
         validate: UserValidator.create,
         handler: UserController.create

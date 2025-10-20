@@ -1,14 +1,6 @@
 const userModel = {}
 
 /**
- * @typedef {Object} User
- * @property {number} id
- * @property {string} fName
- * @property {string} lName
- * @property {number} age
- */
-
-/**
  *
  * @type {User[]}
  */

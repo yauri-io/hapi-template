@@ -1,5 +1,8 @@
-import Boom from '@hapi/boom'
+import * as Boom from '@hapi/boom'
 
+/**
+ * @typedef {import('./model.js').User} User
+ */
 const preHandler = {}
 
 /**
@@ -8,7 +11,7 @@ const preHandler = {}
  * @param {import('@hapi/hapi').ResponseToolkit} h
  */
 preHandler.checkUserExistence = (request, h) => {
-  const payload = request.payload
+  const payload = /** @type {User} */ (request.payload)
   if (payload.fName === 'fName' && payload.lName === 'lName') {
     throw Boom.badRequest('User already exist')
   }
