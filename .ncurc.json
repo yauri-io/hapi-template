@@ -1,6 +1,4 @@
 {
   "reject": [
-    "eslint",
-    "eslint-plugin-promise"
   ]
 }

@@ -1,3 +1,14 @@
+/**
+ * Application configuration object
+ * @typedef {Object} Config
+ * @property {string} environment - Current environment (defaults to 'dev')
+ * @property {Object} server - Server configuration
+ * @property {string} server.logLevel - Server logging level (defaults to 'debug')
+ * @property {string} server.host - Server host address (defaults to '0.0.0.0')
+ * @property {number} server.port - Server port number (defaults to 1337)
+ * @property {string} server.secret - Server secret key for security (defaults to 'RANDOM-STRING')
+ * @property {string[]} server.allowOrigins - CORS allowed origins (defaults to ['*'])
+ */
 const config = {
   environment: process.env.NODE_ENV || 'dev',
   server: {

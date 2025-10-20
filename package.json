@@ -21,20 +21,16 @@
   "keywords": [
     "hapijs"
   ],
-  "author": "yauri-io",
+  "author": "yio",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yauri-io/hapi-next/issues"
+    "url": "https://github.com/yauri-io/hapi-template/issues"
   },
   "lint-staged": {
     "*.js": [
-      "standard --fix"
+      "standard --fix",
+      "prettier --write"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "homepage": "https://github.com/yauri-io/hapi-next#readme",
   "dependencies": {
@@ -43,27 +39,26 @@
     "@hapi/good": "^9.0.1",
     "@hapi/good-console": "^9.0.1",
     "@hapi/good-squeeze": "^6.0.0",
-    "@hapi/hapi": "^21.3.12",
+    "@hapi/hapi": "^21.4.3",
     "@hapi/hoek": "^11.0.7",
     "bluebird": "^3.7.2",
-    "dotenv": "^16.4.7",
-    "hapi-pino": "^12.1.0",
-    "joi": "^17.13.3",
-    "pino-pretty": "^13.0.0"
+    "dotenv": "^17.2.3",
+    "hapi-pino": "^13.0.0",
+    "joi": "^18.0.1",
+    "pino-pretty": "^13.1.2"
   },
   "devDependencies": {
     "@hapi/code": "^9.0.3",
     "@hapi/lab": "^26.0.0",
-    "eslint": "^8.57.1",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-promise": "^6.6.0",
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-promise": "^7.2.1",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "nodemon": "^3.1.9",
-    "prettier": "^3.5.1",
+    "lint-staged": "^16.2.4",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
     "standard": "^17.1.2"
   }
 }
